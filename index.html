@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- Boxicons -->
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+      <title>Kalkulator BMI</title>
+   </head>
+   <body>
+      <main>
+         <section id="measurement">
+            <header>
+               <h2>Kalkulator BMI</h2>
+            </header>
+
+            <p>
+               Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI
+            </p>
+
+            <form>
+               <div class="mb-4">
+                  <h4>Jenis Kelamin</h4>
+
+                  <div class="gender-wrapper">
+                     <label for="man-selected"> <input id="man-selected" type="radio" name="gender" value="man" /> <span>Pria</span> </label>
+                     <label for="woman-selected"> <input id="woman-selected" type="radio" name="gender" value="woman" /> <span>Perempuan</span> </label>
+                  </div>
+               </div>
+               <div class="mb-4">
+                  <label for="input-weight">
+                     <h4 class="mb-2">Berat Badan (kg)</h4>
+                     <div class="input-group"><i class="bx bxs-pencil"></i> <input id="input-weight" type="number" step="0.1" required autocomplete="off" /></div>
+                  </label>
+               </div>
+               <div class="mb-4">
+                  <label for="input-age">
+                     <h4 class="mb-2">Usia (tahun)</h4>
+                  </label>
+                  <div class="input-group"><i class="bx bxs-pencil"></i> <input id="input-age" type="number" min="1" max="80" required autocomplete="off" /></div>
+               </div>
+               <div class="mb-4">
+                  <label for="input-height">
+                     <h4 class="mb-2">Tinggi badan (cm)</h4>
+                  </label>
+                  <div class="input-group"><i class="bx bxs-pencil"></i> <input id="input-height" type="number" required autocomplete="off" /></div>
+               </div>
+
+               <div class="mb-4">
+                  <button type="submit" class="btn btn-count btn-lightblue">Hitung BMI</button>
+                  <button type="reset" class="btn btn-reset">Reset</button>
+               </div>
+            </form>
+         </section>
+         <section id="result">
+            <header><h2>Hasil</h2></header>
+
+            <div class="mb-3">
+               <p>Berat Badan</p>
+
+               <h1 class="result-number">0</h1>
+               <p class="result-status">-</p>
+               <button class="btn btn-download btn-lightblue">Download Hasil BMI</button>
+            </div>
+
+            <article class="summary"></article>
+         </section>
+      </main>
+
+      <script src="js/main.js"></script>
+   </body>
+</html>
